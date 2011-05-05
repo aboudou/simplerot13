@@ -10,7 +10,7 @@
 #import "AlgorithmSelectorViewController.h"
 #import "Algo.h"
 
-@implementation Simple_ROT13ViewController
+@implementation Simple_ROT13ViewController 
 
 @synthesize textView, chooseAlgoButton, cipherButton;
 @synthesize undoValue;
