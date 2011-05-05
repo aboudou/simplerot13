@@ -1,0 +1,200 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* Simple ROT13 */ = {
+		activeExec = 0;
+		executables = (
+			3BC47C33132929F300710343 /* Simple ROT13 */,
+		);
+	};
+	28D7ACF70DDB3853001CB0EB /* Simple_ROT13ViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1183, 2977}}";
+			sepNavSelRange = "{4009, 0}";
+			sepNavVisRange = "{3528, 1235}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeExecutable = 3BC47C33132929F300710343 /* Simple ROT13 */;
+		activeSDKPreference = iphonesimulator4.3;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Simple ROT13 */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* Simple ROT13 */,
+		);
+		codeSenseManager = 3BC47C4813292A1600710343 /* Code sense */;
+		executables = (
+			3BC47C33132929F300710343 /* Simple ROT13 */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1005,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					965,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 323296119;
+			PBXWorkspaceStateSaveDate = 323296119;
+		};
+		perUserProjectItems = {
+			3B20FF5B134456F300012D42 /* PlistBookmark */ = 3B20FF5B134456F300012D42 /* PlistBookmark */;
+			3B20FF5C134456F300012D42 /* PBXBookmark */ = 3B20FF5C134456F300012D42 /* PBXBookmark */;
+			3B20FF5D134456F300012D42 /* PBXBookmark */ = 3B20FF5D134456F300012D42 /* PBXBookmark */;
+			3B20FF5E134456F300012D42 /* PBXBookmark */ = 3B20FF5E134456F300012D42 /* PBXBookmark */;
+			3B265DBF1334D17D00BF45AB /* PBXTextBookmark */ = 3B265DBF1334D17D00BF45AB /* PBXTextBookmark */;
+			3B481E8213315AEA00922E2D /* PBXBookmark */ = 3B481E8213315AEA00922E2D /* PBXBookmark */;
+			3B481E8313315AEA00922E2D /* PBXBookmark */ = 3B481E8313315AEA00922E2D /* PBXBookmark */;
+			3B481E8413315AEA00922E2D /* PBXBookmark */ = 3B481E8413315AEA00922E2D /* PBXBookmark */;
+			3B891DB613451CED00F8FF49 /* PBXBookmark */ = 3B891DB613451CED00F8FF49 /* PBXBookmark */;
+			3BB19721134501840052C858 /* PBXBookmark */ = 3BB19721134501840052C858 /* PBXBookmark */;
+		};
+		sourceControlManager = 3BC47C4713292A1600710343 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	3B20FF5B134456F300012D42 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIdentifier,
+		);
+		name = "/Users/aboudou/Documents/XCode/iOS/Simple ROT13/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	3B20FF5C134456F300012D42 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 3B49C59B13314CD10062B857 /* Default~iphone.png */;
+	};
+	3B20FF5D134456F300012D42 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 3B49C59A13314CD10062B857 /* Default@2x~iphone.png */;
+	};
+	3B20FF5E134456F300012D42 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 3B49C59913314CD10062B857 /* Default.png */;
+	};
+	3B265DBF1334D17D00BF45AB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* Simple_ROT13ViewController.m */;
+		name = "Simple_ROT13ViewController.m: 133";
+		rLen = 0;
+		rLoc = 4009;
+		rType = 0;
+		vrLen = 1235;
+		vrLoc = 3528;
+	};
+	3B481E8213315AEA00922E2D /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = B648B30A1297CDA400CF1129 /* Icon-72.png */;
+	};
+	3B481E8313315AEA00922E2D /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = B6A5A05612A6821900FF655A /* Icon@2x.png */;
+	};
+	3B481E8413315AEA00922E2D /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = B6BA5B2012A6D6BF008209AC /* Icon.png */;
+	};
+	3B891DB613451CED00F8FF49 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 3B49C5B013314EAE0062B857 /* Default-Landscape.png */;
+	};
+	3BB19721134501840052C858 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 3B49C5B013314EAE0062B857 /* Default-Landscape.png */;
+	};
+	3BC47C33132929F300710343 /* Simple ROT13 */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Simple ROT13";
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	3BC47C4713292A1600710343 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	3BC47C4813292A1600710343 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	8D1107310486CEB800E47090 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 8}, {1291, 1015}}";
+		};
+	};
+	B648B30A1297CDA400CF1129 /* Icon-72.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 8}, {1291, 1015}}";
+		};
+	};
+}
