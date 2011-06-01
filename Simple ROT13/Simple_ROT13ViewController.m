@@ -263,8 +263,9 @@
         
     } else {
         [self.navigationController presentModalViewController:selectorViewController animated:YES];
-        [selectorViewController release];
     }
+
+    [selectorViewController release];
 }
 
 @end
