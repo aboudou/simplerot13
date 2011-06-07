@@ -179,6 +179,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = aboudou;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Simple ROT13" */;
@@ -312,10 +313,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Arnaud Boudou (RTC3674WRG)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PREBINDING = NO;
 				PROVISIONING_PROFILE = "D6A838E7-E28E-4F8B-BEA6-EB7FDC1A5D08";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -329,11 +330,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Arnaud Boudou (RTC3674WRG)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
 				PROVISIONING_PROFILE = "D6A838E7-E28E-4F8B-BEA6-EB7FDC1A5D08";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
