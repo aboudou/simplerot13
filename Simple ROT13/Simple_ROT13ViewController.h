@@ -9,29 +9,14 @@
 #import <UIKit/UIKit.h>
 
 
-@interface Simple_ROT13ViewController : UIViewController {
-	IBOutlet UITextView *textView;
-	IBOutlet UIBarButtonItem *chooseAlgoButton;
-	IBOutlet UIBarButtonItem *cipherButton;
-    IBOutlet NSString *undoValue;
-    BOOL isLandscapeLeft;
-    BOOL isLandscapeRight;
-    BOOL isPortrait;
-    BOOL isPortraitUpsideDown;
-    BOOL isResized;
-    
-    UIPopoverController *popoverController;
+@interface Simple_ROT13ViewController : UIViewController {    
+
 }
 
-@property (nonatomic, retain) UITextView *textView;
-@property (nonatomic, retain) UIBarButtonItem *chooseAlgoButton;
-@property (nonatomic, retain) UIBarButtonItem *cipherButton;
+@property (nonatomic, retain) IBOutlet UITextView *textView;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *chooseAlgoButton;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *cipherButton;
 @property (nonatomic, copy) NSString *undoValue;
-@property (nonatomic, assign) BOOL isLandscapeLeft;
-@property (nonatomic, assign) BOOL isLandscapeRight;
-@property (nonatomic, assign) BOOL isPortrait;
-@property (nonatomic, assign) BOOL isPortraitUpsideDown;
-@property (nonatomic, assign) BOOL isResized;
 
 @property (nonatomic, retain) UIPopoverController *popoverController;
 

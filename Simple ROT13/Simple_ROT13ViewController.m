@@ -14,7 +14,6 @@
 
 @synthesize textView, chooseAlgoButton, cipherButton;
 @synthesize undoValue;
-@synthesize isLandscapeLeft, isLandscapeRight, isPortrait, isPortraitUpsideDown, isResized;
 @synthesize popoverController;
 
 #pragma mark -
@@ -25,13 +24,6 @@
 
     [super viewDidLoad];
 
-    self.isLandscapeLeft = NO;
-    self.isLandscapeRight = NO;
-    self.isPortrait= YES;
-    self.isPortraitUpsideDown = NO;
-    // Set to yes by default to manage landscape starting on iPad
-    self.isResized = YES;
-    
     self.textView.text = NSLocalizedString(@"Enter text to cipher", @"Enter text to cipher");
     
     [self registerForKeyboardNotifications];
@@ -56,32 +48,6 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (YES);
-}
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
-        self.isLandscapeLeft = YES;
-        self.isLandscapeRight = NO;
-        self.isPortrait= NO;
-        self.isPortraitUpsideDown = NO;
-    } else if (toInterfaceOrientation == UIInterfaceOrientationLandscapeRight) {
-        self.isLandscapeLeft = NO;
-        self.isLandscapeRight = YES;
-        self.isPortrait= NO;
-        self.isPortraitUpsideDown = NO;
-    } else if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
-        self.isLandscapeLeft = NO;
-        self.isLandscapeRight = NO;
-        self.isPortrait= YES;
-        self.isPortraitUpsideDown = NO;
-    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-        self.isLandscapeLeft = NO;
-        self.isLandscapeRight = NO;
-        self.isPortrait= NO;
-        self.isPortraitUpsideDown = YES;
-    }
-    self.isResized = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -115,33 +81,61 @@
 #pragma mark Keyboard management functions
 
 - (void)keyboardWasShown:(NSNotification*)aNotification {
-    if (self.isResized == NO) {
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.3];
-        
-        NSDictionary* info = [aNotification userInfo];
-        CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-        CGRect bkgndRect = textView.superview.superview.frame;
-        if (self.isLandscapeLeft) {
-            bkgndRect.size.height -= kbSize.width;
-        } else if (self.isLandscapeRight) {
-            bkgndRect.size.height -= kbSize.width;
-        } else if (self.isPortrait) {
-            bkgndRect.size.height -= kbSize.height;
-        } else if (self.isPortraitUpsideDown) {
-            bkgndRect.size.height -= kbSize.height;
-        }
-        [textView.superview.superview setFrame:bkgndRect];
-        
-        [UIView commitAnimations];
-        self.isResized = YES;
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3];
+    
+    float deviceHeight = 0.0f;
+    float deviceWidth = 0.0f;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        deviceHeight = 1024.0f;
+        deviceWidth = 768.0f;
+    } else {
+        deviceHeight = 480.0f;
+        deviceWidth = 320.0f;
     }
+
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeRight) {
+        textView.frame = CGRectMake(0, 0, deviceHeight, deviceWidth-(22+44+kbSize.width));
+    } else if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        textView.frame = CGRectMake(0, 0, deviceWidth, deviceHeight-(22+44+kbSize.height));
+    }
+    
+    [UIView commitAnimations];
+}
+
+- (void)keyboardWasHidden:(NSNotification*)aNotification {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3];
+    
+    float deviceHeight = 0.0f;
+    float deviceWidth = 0.0f;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        deviceHeight = 1024.0f;
+        deviceWidth = 768.0f;
+    } else {
+        deviceHeight = 480.0f;
+        deviceWidth = 320.0f;
+    }
+    
+    if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeRight) {
+        textView.frame = CGRectMake(0, 0, deviceHeight, deviceWidth-(22+44));
+    } else if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        textView.frame = CGRectMake(0, 0, deviceWidth, deviceHeight-(22+44));
+    }
+    
+    [UIView commitAnimations];
 }
 
 - (void)registerForKeyboardNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWasShown:)
                                                  name:UIKeyboardDidShowNotification object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasHidden:)
+                                                 name:UIKeyboardDidHideNotification object:nil];
 }
 
 #pragma mark -
