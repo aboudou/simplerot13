@@ -17,7 +17,7 @@
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
                BuildableName = "Simple ROT13.app"
                BlueprintName = "Simple ROT13"
-               ReferencedContainer = "container:../../../../Documents/XCode/iOS/Simple ROT13/Simple ROT13.xcodeproj">
+               ReferencedContainer = "container:Simple ROT13.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,7 +32,7 @@
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       displayScaleIsEnabled = "NO"
       displayScale = "1.00"
       launchStyle = "0"
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Simple ROT13.app"
             BlueprintName = "Simple ROT13"
-            ReferencedContainer = "container:../../../../Documents/XCode/iOS/Simple ROT13/Simple ROT13.xcodeproj">
+            ReferencedContainer = "container:Simple ROT13.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -67,7 +67,7 @@
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Simple ROT13.app"
             BlueprintName = "Simple ROT13"
-            ReferencedContainer = "container:../../../../Documents/XCode/iOS/Simple ROT13/Simple ROT13.xcodeproj">
+            ReferencedContainer = "container:Simple ROT13.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
