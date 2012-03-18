@@ -11,9 +11,7 @@
 @class Simple_ROT13ViewController;
 
 @interface Simple_ROT13AppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
-    Simple_ROT13ViewController *viewController;
-    UINavigationController *navigationController;
+
 }
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;

@@ -16,8 +16,8 @@
 @property (nonatomic, strong) IBOutlet UITextView *textView;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *chooseAlgoButton;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *cipherButton;
-@property (nonatomic, copy) NSString *undoValue;
 
+@property (nonatomic, strong) NSString *undoValue;
 @property (nonatomic, strong) UIPopoverController *popoverController;
 
 - (IBAction)chooseAlgoButtonPressed:(id)sender;

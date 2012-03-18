@@ -10,10 +10,10 @@
 #import "Simple_ROT13ViewController.h"
 
 @interface AlgorithmSelectorViewController : UITableViewController {
-    NSArray *_algoList;
-    Simple_ROT13ViewController *parentView;
+
 }
 
 @property (nonatomic, strong) Simple_ROT13ViewController *parentView;
+@property (nonatomic, strong) NSArray *algoList;
 
 @end

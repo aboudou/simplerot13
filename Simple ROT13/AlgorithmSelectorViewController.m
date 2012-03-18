@@ -15,6 +15,7 @@ static NSString *const kTitleKey = @"title";
 @implementation AlgorithmSelectorViewController
 
 @synthesize parentView;
+@synthesize algoList;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -42,7 +43,7 @@ static NSString *const kTitleKey = @"title";
 
     self.title = NSLocalizedString(@"Algorithm", @"");
 
-    _algoList = [[NSArray alloc] initWithObjects:
+    algoList = [[NSArray alloc] initWithObjects:
                  [NSDictionary dictionaryWithObjectsAndKeys:
                   [NSArray arrayWithObjects:
                    ALGO_ROT13, ALGO_ROT13_LEET,
@@ -97,12 +98,12 @@ static NSString *const kTitleKey = @"title";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [_algoList count];
+    return [algoList count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[_algoList objectAtIndex:section] objectForKey:kAlgoKey] count];
+    return [[[algoList objectAtIndex:section] objectForKey:kAlgoKey] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -114,7 +115,7 @@ static NSString *const kTitleKey = @"title";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    NSString *name = [[[_algoList objectAtIndex:indexPath.section] objectForKey:kAlgoKey] objectAtIndex:indexPath.row];
+    NSString *name = [[[algoList objectAtIndex:indexPath.section] objectForKey:kAlgoKey] objectAtIndex:indexPath.row];
     
     if ([name isEqualToString:ALGO_ROT13_LEET]) {
         cell.textLabel.text = name;
@@ -137,14 +138,14 @@ static NSString *const kTitleKey = @"title";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	return [[_algoList objectAtIndex:section] objectForKey:kTitleKey];
+	return [[algoList objectAtIndex:section] objectForKey:kTitleKey];
 }
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *name = [[[_algoList objectAtIndex:indexPath.section] objectForKey:kAlgoKey] objectAtIndex:indexPath.row];
+    NSString *name = [[[algoList objectAtIndex:indexPath.section] objectForKey:kAlgoKey] objectAtIndex:indexPath.row];
     
     if ([name isEqualToString:NSLocalizedString(@"Get Simple ROT13 Premium", @"")]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/simple-rot13-premium/id433594344"]];
