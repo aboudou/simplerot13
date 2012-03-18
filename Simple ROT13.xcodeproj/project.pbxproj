@@ -14,14 +14,14 @@
 		3B195D8D1345CEC100474185 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B195D8C1345CEC100474185 /* Default@2x.png */; };
 		3B195D911345CF8700474185 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B195D901345CF8700474185 /* Default-Portrait~ipad.png */; };
 		3B195D931345CFDD00474185 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B195D921345CFDD00474185 /* Default.png */; };
+		3B30E8B91515D61800CD401B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BA1515D61800CD401B /* MainWindow.xib */; };
+		3B30E8BB1515D62500CD401B /* Simple_ROT13ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BC1515D62500CD401B /* Simple_ROT13ViewController.xib */; };
 		3B8A33D8135F30E500A490FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B8A33DA135F30E500A490FF /* Localizable.strings */; };
-		3B8A33DC135F31E700A490FF /* Simple_ROT13ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8A33DE135F31E700A490FF /* Simple_ROT13ViewController.xib */; };
 		3B96C3B01345D7450014D4D1 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B96C3AF1345D7450014D4D1 /* Default-Landscape~ipad.png */; };
 		3BAAD0F01372C2DD00284AC7 /* Algo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0E91372C2DD00284AC7 /* Algo.m */; };
 		3BAAD0F11372C2DD00284AC7 /* AlgorithmSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0EB1372C2DD00284AC7 /* AlgorithmSelectorViewController.m */; };
 		3BAAD0F21372C2DD00284AC7 /* Simple_ROT13AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0ED1372C2DD00284AC7 /* Simple_ROT13AppDelegate.m */; };
 		3BAAD0F31372C2DD00284AC7 /* Simple_ROT13ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0EF1372C2DD00284AC7 /* Simple_ROT13ViewController.m */; };
-		3BBE82D0135F426600D68299 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBE82D2135F426600D68299 /* MainWindow.xib */; };
 		3BBE82E0135F4EDF00D68299 /* AlgorithmSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBE82DE135F4EDF00D68299 /* AlgorithmSelectorViewController.xib */; };
 		B648B30B1297CDA400CF1129 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B648B30A1297CDA400CF1129 /* Icon-72.png */; };
 		B6A5A05712A6821900FF655A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A5A05612A6821900FF655A /* Icon@2x.png */; };
@@ -39,10 +39,10 @@
 		3B195D8C1345CEC100474185 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3B195D901345CF8700474185 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		3B195D921345CFDD00474185 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3B30E8BA1515D61800CD401B /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		3B30E8BC1515D62500CD401B /* Simple_ROT13ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Simple_ROT13ViewController.xib; sourceTree = "<group>"; };
 		3B8A33D9135F30E500A490FF /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B8A33DB135F30ED00A490FF /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3B8A33DD135F31E700A490FF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Simple_ROT13ViewController.xib; sourceTree = "<group>"; };
-		3B8A33DF135F31EE00A490FF /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/Simple_ROT13ViewController.xib; sourceTree = "<group>"; };
 		3B96C3AF1345D7450014D4D1 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		3BAAD0E81372C2DD00284AC7 /* Algo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algo.h; sourceTree = "<group>"; };
 		3BAAD0E91372C2DD00284AC7 /* Algo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algo.m; sourceTree = "<group>"; };
@@ -52,8 +52,6 @@
 		3BAAD0ED1372C2DD00284AC7 /* Simple_ROT13AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Simple_ROT13AppDelegate.m; sourceTree = "<group>"; };
 		3BAAD0EE1372C2DD00284AC7 /* Simple_ROT13ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simple_ROT13ViewController.h; sourceTree = "<group>"; };
 		3BAAD0EF1372C2DD00284AC7 /* Simple_ROT13ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Simple_ROT13ViewController.m; sourceTree = "<group>"; };
-		3BBE82D1135F426600D68299 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		3BBE82D3135F427100D68299 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		3BBE82DE135F4EDF00D68299 /* AlgorithmSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlgorithmSelectorViewController.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		B648B30A1297CDA400CF1129 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -79,14 +77,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3BAAD0E81372C2DD00284AC7 /* Algo.h */,
-				3BAAD0E91372C2DD00284AC7 /* Algo.m */,
-				3BAAD0EA1372C2DD00284AC7 /* AlgorithmSelectorViewController.h */,
-				3BAAD0EB1372C2DD00284AC7 /* AlgorithmSelectorViewController.m */,
-				3BAAD0EC1372C2DD00284AC7 /* Simple_ROT13AppDelegate.h */,
-				3BAAD0ED1372C2DD00284AC7 /* Simple_ROT13AppDelegate.m */,
-				3BAAD0EE1372C2DD00284AC7 /* Simple_ROT13ViewController.h */,
-				3BAAD0EF1372C2DD00284AC7 /* Simple_ROT13ViewController.m */,
+				3BD4601D1515D4DB00854AEF /* Utils */,
+				3BD4601C1515D4D300854AEF /* Controllers */,
 			);
 			name = Classes;
 			path = "Simple ROT13";
@@ -125,7 +117,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3BBE82DE135F4EDF00D68299 /* AlgorithmSelectorViewController.xib */,
 				3B195D921345CFDD00474185 /* Default.png */,
 				3B96C3AF1345D7450014D4D1 /* Default-Landscape~ipad.png */,
 				3B195D901345CF8700474185 /* Default-Portrait~ipad.png */,
@@ -134,8 +125,6 @@
 				B6E1322412A692EC00D38AF8 /* iTunesArtwork */,
 				B6A5A05612A6821900FF655A /* Icon@2x.png */,
 				B648B30A1297CDA400CF1129 /* Icon-72.png */,
-				3B8A33DE135F31E700A490FF /* Simple_ROT13ViewController.xib */,
-				3BBE82D2135F426600D68299 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				3B8A33DA135F30E500A490FF /* Localizable.strings */,
 			);
@@ -151,6 +140,31 @@
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BD4601C1515D4D300854AEF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BAAD0EA1372C2DD00284AC7 /* AlgorithmSelectorViewController.h */,
+				3BAAD0EB1372C2DD00284AC7 /* AlgorithmSelectorViewController.m */,
+				3BBE82DE135F4EDF00D68299 /* AlgorithmSelectorViewController.xib */,
+				3BAAD0EC1372C2DD00284AC7 /* Simple_ROT13AppDelegate.h */,
+				3BAAD0ED1372C2DD00284AC7 /* Simple_ROT13AppDelegate.m */,
+				3BAAD0EE1372C2DD00284AC7 /* Simple_ROT13ViewController.h */,
+				3BAAD0EF1372C2DD00284AC7 /* Simple_ROT13ViewController.m */,
+				3B30E8BC1515D62500CD401B /* Simple_ROT13ViewController.xib */,
+				3B30E8BA1515D61800CD401B /* MainWindow.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3BD4601D1515D4DB00854AEF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3BAAD0E81372C2DD00284AC7 /* Algo.h */,
+				3BAAD0E91372C2DD00284AC7 /* Algo.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +222,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BBE82D0135F426600D68299 /* MainWindow.xib in Resources */,
-				3B8A33DC135F31E700A490FF /* Simple_ROT13ViewController.xib in Resources */,
+				3B30E8B91515D61800CD401B /* MainWindow.xib in Resources */,
+				3B30E8BB1515D62500CD401B /* Simple_ROT13ViewController.xib in Resources */,
 				B648B30B1297CDA400CF1129 /* Icon-72.png in Resources */,
 				B6A5A05712A6821900FF655A /* Icon@2x.png in Resources */,
 				B6E1322512A692EC00D38AF8 /* iTunesArtwork in Resources */,
@@ -250,24 +264,6 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		3B8A33DE135F31E700A490FF /* Simple_ROT13ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B8A33DD135F31E700A490FF /* en */,
-				3B8A33DF135F31EE00A490FF /* fr */,
-			);
-			name = Simple_ROT13ViewController.xib;
-			sourceTree = "<group>";
-		};
-		3BBE82D2135F426600D68299 /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3BBE82D1135F426600D68299 /* en */,
-				3BBE82D3135F427100D68299 /* fr */,
-			);
-			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -275,7 +271,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Arnaud Boudou (RTC3674WRG)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -283,9 +280,9 @@
 				GCC_PREFIX_HEADER = "Simple ROT13/Simple_ROT13_Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Simple ROT13/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "Simple ROT13";
-				PROVISIONING_PROFILE = "2CBBC603-82BF-468B-9F7F-81901DCA93E7";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -294,13 +291,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Arnaud Boudou";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple ROT13/Simple_ROT13_Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Simple ROT13/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "Simple ROT13";
 				PROVISIONING_PROFILE = "95CBF265-C5FA-4A14-8918-251A7804CC41";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,11 +309,8 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7,
-					armv6,
-				);
-				CODE_SIGN_IDENTITY = "iPhone Developer: Arnaud Boudou (RTC3674WRG)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -323,7 +318,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PROVISIONING_PROFILE = "2CBBC603-82BF-468B-9F7F-81901DCA93E7";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -332,10 +327,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Arnaud Boudou";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;

@@ -1,3 +1,6 @@
+// Cipher button
+"cipherButton" = "Chiffrer";
+
 // Enter text to cipher
 "Enter text to cipher" = "Saisissez le texte à chiffrer";
 

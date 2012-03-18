@@ -13,12 +13,12 @@
 
 }
 
-@property (nonatomic, retain) IBOutlet UITextView *textView;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *chooseAlgoButton;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *cipherButton;
+@property (nonatomic, strong) IBOutlet UITextView *textView;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *chooseAlgoButton;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *cipherButton;
 @property (nonatomic, copy) NSString *undoValue;
 
-@property (nonatomic, retain) UIPopoverController *popoverController;
+@property (nonatomic, strong) UIPopoverController *popoverController;
 
 - (IBAction)chooseAlgoButtonPressed:(id)sender;
 

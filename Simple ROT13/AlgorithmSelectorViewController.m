@@ -25,13 +25,6 @@ static NSString *const kTitleKey = @"title";
     return self;
 }
 
-- (void)dealloc
-{
-    [_algoList release];
-    [parentView release];
-    
-    [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -47,7 +40,7 @@ static NSString *const kTitleKey = @"title";
 {
     [super viewDidLoad];
 
-    self.title = NSLocalizedString(@"Algorithm", @"Algorithm");
+    self.title = NSLocalizedString(@"Algorithm", @"");
 
     _algoList = [[NSArray alloc] initWithObjects:
                  [NSDictionary dictionaryWithObjectsAndKeys:
@@ -59,9 +52,9 @@ static NSString *const kTitleKey = @"title";
                  
                  [NSDictionary dictionaryWithObjectsAndKeys:
                   [NSArray arrayWithObjects:
-                   NSLocalizedString(@"Get Simple ROT13 Premium", @"Get Simple ROT13 Premium"),
+                   NSLocalizedString(@"Get Simple ROT13 Premium", @""),
                    nil], kAlgoKey,
-                  NSLocalizedString(@"Need more ?", @"Need more ?"), kTitleKey,
+                  NSLocalizedString(@"Need more ?", @""), kTitleKey,
                   nil],
 
                  nil];
@@ -118,7 +111,7 @@ static NSString *const kTitleKey = @"title";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     NSString *name = [[[_algoList objectAtIndex:indexPath.section] objectForKey:kAlgoKey] objectAtIndex:indexPath.row];
@@ -129,7 +122,7 @@ static NSString *const kTitleKey = @"title";
     } else if ([name isEqualToString:ALGO_ROT13]) {
         cell.textLabel.text = name;
 
-    } else if ([name isEqualToString:NSLocalizedString(@"Get Simple ROT13 Premium", @"Get Simple ROT13 Premium")]) {
+    } else if ([name isEqualToString:NSLocalizedString(@"Get Simple ROT13 Premium", @"")]) {
         cell.textLabel.text = name;
         
     }
@@ -153,7 +146,7 @@ static NSString *const kTitleKey = @"title";
 {
     NSString *name = [[[_algoList objectAtIndex:indexPath.section] objectForKey:kAlgoKey] objectAtIndex:indexPath.row];
     
-    if ([name isEqualToString:NSLocalizedString(@"Get Simple ROT13 Premium", @"Get Simple ROT13 Premium")]) {
+    if ([name isEqualToString:NSLocalizedString(@"Get Simple ROT13 Premium", @"")]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/simple-rot13-premium/id433594344"]];
     } else {
         self.parentView.chooseAlgoButton.title = name;

@@ -14,6 +14,6 @@
     Simple_ROT13ViewController *parentView;
 }
 
-@property (nonatomic, retain) Simple_ROT13ViewController *parentView;
+@property (nonatomic, strong) Simple_ROT13ViewController *parentView;
 
 @end

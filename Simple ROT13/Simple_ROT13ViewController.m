@@ -24,7 +24,9 @@
 
     [super viewDidLoad];
 
-    self.textView.text = NSLocalizedString(@"Enter text to cipher", @"Enter text to cipher");
+    // Localisation
+    [self.textView setText:NSLocalizedString(@"Enter text to cipher", @"")];
+    [self.cipherButton setTitle:NSLocalizedString(@"cipherButton", @"")];
     
     [self registerForKeyboardNotifications];
 }
@@ -57,7 +59,6 @@
 	
 	// Release any cached data, images, etc that aren't in use.
     self.undoValue = nil;
-    [undoValue release];
 }
 
 - (void)viewDidUnload {
@@ -67,15 +68,6 @@
     self.undoValue = nil;
 }
 
-- (void)dealloc {
-    [textView release];
-    [chooseAlgoButton release];
-    [cipherButton release];
-    [undoValue release];
-    [popoverController release];
-    
-    [super dealloc];
-}
 
 #pragma mark -
 #pragma mark Keyboard management functions
@@ -259,7 +251,6 @@
         [self.navigationController presentModalViewController:selectorViewController animated:YES];
     }
 
-    [selectorViewController release];
 }
 
 @end
