@@ -25,6 +25,7 @@
 		3BAAD0F11372C2DD00284AC7 /* AlgorithmSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0EB1372C2DD00284AC7 /* AlgorithmSelectorViewController.m */; };
 		3BAAD0F21372C2DD00284AC7 /* Simple_ROT13AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0ED1372C2DD00284AC7 /* Simple_ROT13AppDelegate.m */; };
 		3BAAD0F31372C2DD00284AC7 /* Simple_ROT13ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0EF1372C2DD00284AC7 /* Simple_ROT13ViewController.m */; };
+		3BAFCE9316046D5400C951EF /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BAFCE9216046D5400C951EF /* Default-568h@2x~iphone.png */; };
 		3BBE82E0135F4EDF00D68299 /* AlgorithmSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBE82DE135F4EDF00D68299 /* AlgorithmSelectorViewController.xib */; };
 		B648B30B1297CDA400CF1129 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B648B30A1297CDA400CF1129 /* Icon-72.png */; };
 		B6A5A05712A6821900FF655A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A5A05612A6821900FF655A /* Icon@2x.png */; };
@@ -58,6 +59,7 @@
 		3BAAD0ED1372C2DD00284AC7 /* Simple_ROT13AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Simple_ROT13AppDelegate.m; sourceTree = "<group>"; };
 		3BAAD0EE1372C2DD00284AC7 /* Simple_ROT13ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simple_ROT13ViewController.h; sourceTree = "<group>"; };
 		3BAAD0EF1372C2DD00284AC7 /* Simple_ROT13ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Simple_ROT13ViewController.m; sourceTree = "<group>"; };
+		3BAFCE9216046D5400C951EF /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		3BBE82DE135F4EDF00D68299 /* AlgorithmSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlgorithmSelectorViewController.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		B648B30A1297CDA400CF1129 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -123,12 +125,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3B195D921345CFDD00474185 /* Default~iphone.png */,
 				3B96C3AF1345D7450014D4D1 /* Default-Landscape~ipad.png */,
 				3B30E8BD1515D6E700CD401B /* Default-Landscape@2x~ipad.png */,
 				3B195D901345CF8700474185 /* Default-Portrait~ipad.png */,
 				3B30E8BE1515D6E700CD401B /* Default-Portrait@2x~ipad.png */,
+				3B195D921345CFDD00474185 /* Default~iphone.png */,
 				3B195D8C1345CEC100474185 /* Default@2x~iphone.png */,
+				3BAFCE9216046D5400C951EF /* Default-568h@2x~iphone.png */,
 				B6BA5B2012A6D6BF008209AC /* Icon.png */,
 				B6E1322412A692EC00D38AF8 /* iTunesArtwork */,
 				B6A5A05612A6821900FF655A /* Icon@2x.png */,
@@ -202,7 +205,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = aboudou;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Simple ROT13" */;
@@ -246,6 +249,7 @@
 				3B30E8BF1515D6E700CD401B /* Default-Landscape@2x~ipad.png in Resources */,
 				3B30E8C01515D6E700CD401B /* Default-Portrait@2x~ipad.png in Resources */,
 				3B30E8C21515D7FD00CD401B /* Icon-72@2x.png in Resources */,
+				3BAFCE9316046D5400C951EF /* Default-568h@2x~iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +296,7 @@
 				GCC_PREFIX_HEADER = "Simple ROT13/Simple_ROT13_Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Simple ROT13/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Simple ROT13";
 				PROVISIONING_PROFILE = "19FE702F-1F6C-4D93-B9BD-D184B90FA796";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,7 +314,7 @@
 				GCC_PREFIX_HEADER = "Simple ROT13/Simple_ROT13_Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Simple ROT13/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Simple ROT13";
 				PROVISIONING_PROFILE = "2BBEF15E-9ED9-4699-B0BB-8DD1655E7B2C";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -329,7 +333,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PROVISIONING_PROFILE = "19FE702F-1F6C-4D93-B9BD-D184B90FA796";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -347,7 +351,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "2BBEF15E-9ED9-4699-B0BB-8DD1655E7B2C";
 				SDKROOT = iphoneos;

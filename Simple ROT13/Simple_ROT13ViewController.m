@@ -27,8 +27,9 @@
     // Localisation
     [self.textView setText:NSLocalizedString(@"Enter text to cipher", @"")];
     [self.cipherButton setTitle:NSLocalizedString(@"cipherButton", @"")];
-    
+
     [self registerForKeyboardNotifications];
+    
 }
 
 
@@ -47,9 +48,14 @@
 }
 
 // Override to allow orientations other than the default portrait orientation.
+// iOS up to 5.x
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
     return (YES);
+}
+
+// iOS from 6.0
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,15 +82,8 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     
-    float deviceHeight = 0.0f;
-    float deviceWidth = 0.0f;
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        deviceHeight = 1024.0f;
-        deviceWidth = 768.0f;
-    } else {
-        deviceHeight = 480.0f;
-        deviceWidth = 320.0f;
-    }
+    float deviceHeight = [[UIScreen mainScreen] bounds].size.height;
+    float deviceWidth = [[UIScreen mainScreen] bounds].size.width;
 
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
@@ -101,15 +100,8 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     
-    float deviceHeight = 0.0f;
-    float deviceWidth = 0.0f;
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        deviceHeight = 1024.0f;
-        deviceWidth = 768.0f;
-    } else {
-        deviceHeight = 480.0f;
-        deviceWidth = 320.0f;
-    }
+    float deviceHeight = [[UIScreen mainScreen] bounds].size.height;
+    float deviceWidth = [[UIScreen mainScreen] bounds].size.width;
     
     if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeRight) {
         textView.frame = CGRectMake(0, 0, deviceHeight, deviceWidth-(22+44));
