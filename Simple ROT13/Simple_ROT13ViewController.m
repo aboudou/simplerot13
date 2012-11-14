@@ -128,7 +128,7 @@
 // On device shaking, undo previous encoding
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (event.type == UIEventSubtypeMotionShake) {
-        if (self.undoValue != nil && self.undoValue != @"") {
+        if (self.undoValue != nil && ![self.undoValue isEqualToString:@""]) {
             textView.text = undoValue;
         }
     }
