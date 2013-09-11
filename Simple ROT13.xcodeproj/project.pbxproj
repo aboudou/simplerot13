@@ -14,6 +14,7 @@
 		3B195D8D1345CEC100474185 /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B195D8C1345CEC100474185 /* Default@2x~iphone.png */; };
 		3B195D911345CF8700474185 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B195D901345CF8700474185 /* Default-Portrait~ipad.png */; };
 		3B195D931345CFDD00474185 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B195D921345CFDD00474185 /* Default~iphone.png */; };
+		3B26E52917E06C1600E7FD9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B26E52817E06C1600E7FD9D /* Images.xcassets */; };
 		3B30E8B91515D61800CD401B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BA1515D61800CD401B /* MainWindow.xib */; };
 		3B30E8BB1515D62500CD401B /* Simple_ROT13ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BC1515D62500CD401B /* Simple_ROT13ViewController.xib */; };
 		3B30E8BF1515D6E700CD401B /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BD1515D6E700CD401B /* Default-Landscape@2x~ipad.png */; };
@@ -46,6 +47,7 @@
 		3B195D8C1345CEC100474185 /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~iphone.png"; sourceTree = "<group>"; };
 		3B195D901345CF8700474185 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		3B195D921345CFDD00474185 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
+		3B26E52817E06C1600E7FD9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3B30E8BA1515D61800CD401B /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		3B30E8BC1515D62500CD401B /* Simple_ROT13ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Simple_ROT13ViewController.xib; sourceTree = "<group>"; };
 		3B30E8BD1515D6E700CD401B /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3B26E52817E06C1600E7FD9D /* Images.xcassets */,
 				3B96C3AF1345D7450014D4D1 /* Default-Landscape~ipad.png */,
 				3B30E8BD1515D6E700CD401B /* Default-Landscape@2x~ipad.png */,
 				3B195D901345CF8700474185 /* Default-Portrait~ipad.png */,
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B30E8B91515D61800CD401B /* MainWindow.xib in Resources */,
+				3B26E52917E06C1600E7FD9D /* Images.xcassets in Resources */,
 				3B30E8BB1515D62500CD401B /* Simple_ROT13ViewController.xib in Resources */,
 				B648B30B1297CDA400CF1129 /* Icon-72.png in Resources */,
 				B6A5A05712A6821900FF655A /* Icon@2x.png in Resources */,
@@ -304,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -324,6 +329,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
