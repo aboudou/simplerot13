@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface Simple_ROT13ViewController : UIViewController {    
+@interface Simple_ROT13ViewController : UIViewController {
 
 }
 

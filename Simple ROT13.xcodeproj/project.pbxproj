@@ -19,6 +19,9 @@
 		3B30E8BF1515D6E700CD401B /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BD1515D6E700CD401B /* Default-Landscape@2x~ipad.png */; };
 		3B30E8C01515D6E700CD401B /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BE1515D6E700CD401B /* Default-Portrait@2x~ipad.png */; };
 		3B30E8C21515D7FD00CD401B /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8C11515D7FD00CD401B /* Icon-72@2x.png */; };
+		3B7F9B7D178D458D007FCFBC /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F9B6F178D42D5007FCFBC /* Icon-60@2x.png */; };
+		3B7F9B7E178D4591007FCFBC /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F9B71178D42D5007FCFBC /* Icon-76@2x.png */; };
+		3B7F9B7F178D4594007FCFBC /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F9B70178D42D5007FCFBC /* Icon-76.png */; };
 		3B8A33D8135F30E500A490FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B8A33DA135F30E500A490FF /* Localizable.strings */; };
 		3B96C3B01345D7450014D4D1 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B96C3AF1345D7450014D4D1 /* Default-Landscape~ipad.png */; };
 		3BAAD0F01372C2DD00284AC7 /* Algo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0E91372C2DD00284AC7 /* Algo.m */; };
@@ -48,6 +51,9 @@
 		3B30E8BD1515D6E700CD401B /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		3B30E8BE1515D6E700CD401B /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		3B30E8C11515D7FD00CD401B /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		3B7F9B6F178D42D5007FCFBC /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		3B7F9B70178D42D5007FCFBC /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		3B7F9B71178D42D5007FCFBC /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
 		3B8A33D9135F30E500A490FF /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B8A33DB135F30ED00A490FF /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B96C3AF1345D7450014D4D1 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
@@ -134,6 +140,9 @@
 				3BAFCE9216046D5400C951EF /* Default-568h@2x~iphone.png */,
 				B6BA5B2012A6D6BF008209AC /* Icon.png */,
 				B6E1322412A692EC00D38AF8 /* iTunesArtwork */,
+				3B7F9B6F178D42D5007FCFBC /* Icon-60@2x.png */,
+				3B7F9B70178D42D5007FCFBC /* Icon-76.png */,
+				3B7F9B71178D42D5007FCFBC /* Icon-76@2x.png */,
 				B6A5A05612A6821900FF655A /* Icon@2x.png */,
 				B648B30A1297CDA400CF1129 /* Icon-72.png */,
 				3B30E8C11515D7FD00CD401B /* Icon-72@2x.png */,
@@ -205,8 +214,13 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = aboudou;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = GBBYECNDQ9;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Simple ROT13" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -243,11 +257,14 @@
 				3B195D8D1345CEC100474185 /* Default@2x~iphone.png in Resources */,
 				3B195D911345CF8700474185 /* Default-Portrait~ipad.png in Resources */,
 				3B195D931345CFDD00474185 /* Default~iphone.png in Resources */,
+				3B7F9B7D178D458D007FCFBC /* Icon-60@2x.png in Resources */,
+				3B7F9B7E178D4591007FCFBC /* Icon-76@2x.png in Resources */,
 				3B96C3B01345D7450014D4D1 /* Default-Landscape~ipad.png in Resources */,
 				3B8A33D8135F30E500A490FF /* Localizable.strings in Resources */,
 				3BBE82E0135F4EDF00D68299 /* AlgorithmSelectorViewController.xib in Resources */,
 				3B30E8BF1515D6E700CD401B /* Default-Landscape@2x~ipad.png in Resources */,
 				3B30E8C01515D6E700CD401B /* Default-Portrait@2x~ipad.png in Resources */,
+				3B7F9B7F178D4594007FCFBC /* Icon-76.png in Resources */,
 				3B30E8C21515D7FD00CD401B /* Icon-72@2x.png in Resources */,
 				3BAFCE9316046D5400C951EF /* Default-568h@2x~iphone.png in Resources */,
 			);
@@ -288,7 +305,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Arnaud Boudou (RTC3674WRG)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -296,7 +313,7 @@
 				GCC_PREFIX_HEADER = "Simple ROT13/Simple_ROT13_Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Simple ROT13/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "Simple ROT13";
 				PROVISIONING_PROFILE = "48C75E0E-ABF1-4B37-BF58-7A6CC5B5568D";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -308,13 +325,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Arnaud Boudou";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple ROT13/Simple_ROT13_Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Simple ROT13/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "Simple ROT13";
 				PROVISIONING_PROFILE = "1D998D99-F19C-4603-89EC-8ECA4D55F63F";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,9 +342,11 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Arnaud Boudou (RTC3674WRG)";
@@ -336,10 +355,13 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "43608B54-3E37-4495-A7B0-B999AD0E60AC";
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "48C75E0E-ABF1-4B37-BF58-7A6CC5B5568D";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -348,9 +370,11 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Arnaud Boudou";
@@ -359,11 +383,13 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "2BBEF15E-9ED9-4699-B0BB-8DD1655E7B2C";
+				PROVISIONING_PROFILE = "1D998D99-F19C-4603-89EC-8ECA4D55F63F";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

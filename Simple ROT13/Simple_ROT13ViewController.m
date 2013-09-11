@@ -29,6 +29,8 @@
     [self.cipherButton setTitle:NSLocalizedString(@"cipherButton", @"")];
 
     [self registerForKeyboardNotifications];
+
+    [self.navigationController.navigationBar setTranslucent:NO];
     
 }
 
@@ -47,12 +49,6 @@
     [self becomeFirstResponder];
 }
 
-// Override to allow orientations other than the default portrait orientation.
-// iOS up to 5.x
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (YES);
-}
-
 // iOS from 6.0
 - (NSUInteger)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskAll;
@@ -64,13 +60,6 @@
     [super didReceiveMemoryWarning];
 	
 	// Release any cached data, images, etc that aren't in use.
-    self.undoValue = nil;
-}
-
-- (void)viewDidUnload {
-    self.textView = nil;
-    self.chooseAlgoButton = nil;
-    self.cipherButton = nil;
     self.undoValue = nil;
 }
 
@@ -87,13 +76,14 @@
 
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+
     if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeRight) {
-        textView.frame = CGRectMake(0, 0, deviceHeight, deviceWidth-(22+44+kbSize.width));
+        textView.frame = CGRectMake(textView.frame.origin.x, textView.frame.origin.y, deviceHeight, deviceWidth-([self getTopHeight]+kbSize.width));
     } else if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-        textView.frame = CGRectMake(0, 0, deviceWidth, deviceHeight-(22+44+kbSize.height));
+        textView.frame = CGRectMake(textView.frame.origin.x, textView.frame.origin.y, deviceWidth, deviceHeight-([self getTopHeight]+kbSize.height));
     }
     
-    [UIView commitAnimations];
+    [UIView commitAnimations];    
 }
 
 - (void)keyboardWasHidden:(NSNotification*)aNotification {
@@ -104,9 +94,9 @@
     float deviceWidth = [[UIScreen mainScreen] bounds].size.width;
     
     if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeRight) {
-        textView.frame = CGRectMake(0, 0, deviceHeight, deviceWidth-(22+44));
+        textView.frame = CGRectMake(textView.frame.origin.x, textView.frame.origin.y, deviceHeight, deviceWidth-([self getTopHeight]));
     } else if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-        textView.frame = CGRectMake(0, 0, deviceWidth, deviceHeight-(22+44));
+        textView.frame = CGRectMake(textView.frame.origin.x, textView.frame.origin.y, deviceWidth, deviceHeight-([self getTopHeight]));
     }
     
     [UIView commitAnimations];
@@ -232,7 +222,7 @@
         if(![popoverController isPopoverVisible]){
             // Popover is not visible
             popoverController = [[UIPopoverController alloc] initWithContentViewController:selectorViewController];
-            [popoverController setPopoverContentSize: CGSizeMake(320.0, selectorViewController.tableView.rowHeight * 5.5) animated:YES];
+            [popoverController setPopoverContentSize: CGSizeMake(320.0, selectorViewController.tableView.rowHeight * 6.5) animated:YES];
             [popoverController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
         }else{
             [popoverController dismissPopoverAnimated:YES];
@@ -240,9 +230,23 @@
         }
         
     } else {
-        [self.navigationController presentModalViewController:selectorViewController animated:YES];
+        [self.navigationController presentViewController:selectorViewController animated:YES completion:NULL];
     }
 
+}
+
+- (float) getTopHeight {
+    float navigationBarHeight = self.navigationController.navigationBar.frame.size.height;
+
+    float statusBasHeight = 0.0f;
+    
+    if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeRight) {
+        statusBasHeight = [UIApplication sharedApplication].statusBarFrame.size.width;
+    } else {
+        statusBasHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    }
+
+    return navigationBarHeight + statusBasHeight;
 }
 
 @end

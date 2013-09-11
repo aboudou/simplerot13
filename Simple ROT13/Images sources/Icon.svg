@@ -17,9 +17,9 @@
    sodipodi:docname="Icon.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
-   inkscape:export-filename="/Users/aboudou/Desktop/iTunesArtwork.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   inkscape:export-filename="/Users/aboudou/Desktop/Icon-60@2x.png"
+   inkscape:export-xdpi="10.55"
+   inkscape:export-ydpi="10.55">
   <defs
      id="defs2415">
     <inkscape:perspective
@@ -49,7 +49,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.76660156"
      inkscape:cx="512"
-     inkscape:cy="494.81162"
+     inkscape:cy="482.41926"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -68,7 +68,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
