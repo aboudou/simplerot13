@@ -25,8 +25,13 @@
     [super viewDidLoad];
 
     // Localisation
-    [self.textView setText:NSLocalizedString(@"Enter text to cipher", @"")];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"blank_editor"]) {
+        [self.textView setText:NSLocalizedString(@"Enter text to cipher", @"")];
+    }
     [self.cipherButton setTitle:NSLocalizedString(@"cipherButton", @"")];
+    if ([[NSUserDefaults standardUserDefaults] stringForKey:@"default_cipher"] != nil && [[[NSUserDefaults standardUserDefaults] stringForKey:@"default_cipher"] length] > 0) {
+        [self.chooseAlgoButton setTitle:[[NSUserDefaults standardUserDefaults] stringForKey:@"default_cipher"]];
+    }
 
     [self registerForKeyboardNotifications];
 
