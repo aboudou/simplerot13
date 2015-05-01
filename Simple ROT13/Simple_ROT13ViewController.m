@@ -14,15 +14,6 @@
 
 @implementation Simple_ROT13ViewController
 
-@synthesize textView, chooseAlgoButton, cipherButton;
-@synthesize undoValue;
-@synthesize popoverController;
-#ifdef SIMPLE_ROT_13_FREE
-@synthesize adView, bannerIsVisible;
-#endif
-
-
-
 #pragma mark - Controller/view lifecycle
 - (void)viewDidLoad {
 
@@ -40,12 +31,14 @@
     [self registerForKeyboardNotifications];
 
     [self.navigationController.navigationBar setTranslucent:NO];
-    
+
 #ifdef SIMPLE_ROT_13_FREE
-    //self.adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 50.0f)];
-    self.adView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+    self.adView.delegate=self;
     [self.view addSubview:self.adView];
-    self.bannerIsVisible = NO;
+    self.bannerTop.constant = -[self getBannerHeight];
+    [self.view layoutIfNeeded];
+    self.bannerIsVisible=NO;
+    [self.adView setHidden:!self.bannerIsVisible];
 #endif
     
 }
@@ -53,13 +46,6 @@
 
 - (void)viewWillAppear:(BOOL)flag {
     [super viewWillAppear:flag];
-
-#ifdef SIMPLE_ROT_13_FREE
-    adView.frame = CGRectOffset(adView.frame, 0, -[self getBannerHeight]);
-    
-    adView.delegate=self;
-    self.bannerIsVisible=NO;
-#endif
 }
 
 // Allow view to become the first responder
@@ -77,22 +63,24 @@
     return UIInterfaceOrientationMaskAll;
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context)
+     {
+     } completion:^(id<UIViewControllerTransitionCoordinatorContext> context)
+     {
 #ifdef SIMPLE_ROT_13_FREE
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    if (self.bannerIsVisible) {
-        
-        float deviceHeight = [[UIScreen mainScreen] bounds].size.height;
-        float deviceWidth = [[UIScreen mainScreen] bounds].size.width;
-        
-        // On redimensionne la textView, dans le cas de l'iPhone la bannière n'a pas la même hauteur en portrait et paysage.
-        if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeRight) {
-            textView.frame = CGRectMake(0, [self getBannerHeight], deviceHeight, deviceWidth-([self getTopHeight]+[self getBannerHeight]));
-        } else if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-            textView.frame = CGRectMake(0, [self getBannerHeight], deviceWidth, deviceHeight-([self getTopHeight]+[self getBannerHeight]));
-        }
-    }
-}
+         if (self.bannerIsVisible) {
+             self.bannerTop.constant = 0.0f;
+         } else {
+             self.bannerTop.constant = -[self getBannerHeight];
+         }
+         [self.view layoutIfNeeded];
 #endif
+     }];
+    
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+}
 
 - (void)didReceiveMemoryWarning {
     
@@ -105,7 +93,7 @@
 
 #ifdef SIMPLE_ROT_13_FREE
 - (void)dealloc {
-    adView.delegate = nil;
+    self.adView.delegate = nil;
 }
 #endif
 
@@ -115,24 +103,26 @@
 #pragma mark - ADBannerViewDelegate
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner {
     if (!self.bannerIsVisible) {
+        NSLog(@"Banner shown");
         self.bannerIsVisible = YES;
         [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
         // banner is invisible now and moved out of the screen on 50 px
-        banner.frame = CGRectOffset(banner.frame, 0, [self getBannerHeight]);
-        CGRect rect = textView.frame;
-        textView.frame = CGRectMake(rect.origin.x, rect.origin.y + [self getBannerHeight], rect.size.width, rect.size.height - [self getBannerHeight]);
+        self.bannerTop.constant = 0.0f;
+        [self.view layoutIfNeeded];
+        [self.adView setHidden:!self.bannerIsVisible];
         [UIView commitAnimations];
     }
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
     if (self.bannerIsVisible) {
+        NSLog(@"Banner hidden");
         self.bannerIsVisible = NO;
         [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
         // banner is visible and we move it out of the screen, due to connection issue
-        banner.frame = CGRectOffset(banner.frame, 0, -[self getBannerHeight]);
-        CGRect rect = textView.frame;
-        textView.frame = CGRectMake(rect.origin.x, rect.origin.y - [self getBannerHeight], rect.size.width, rect.size.height + [self getBannerHeight]);
+        self.bannerTop.constant = -[self getBannerHeight];
+        [self.view layoutIfNeeded];
+        [self.adView setHidden:!self.bannerIsVisible];
         [UIView commitAnimations];
     }
 }
@@ -145,25 +135,24 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     
-    float deviceHeight = [[UIScreen mainScreen] bounds].size.height;
-    float deviceWidth = [[UIScreen mainScreen] bounds].size.width;
-
-    float bannerHeight = 0.0f;
 #ifdef SIMPLE_ROT_13_FREE
-    if (bannerIsVisible) {
+    float bannerHeight = 0.0f;
+    if (self.bannerIsVisible) {
         bannerHeight = [self getBannerHeight];
     } else {
         bannerHeight = 0.0f;
     }
+    self.bannerHeight.constant = bannerHeight;
 #endif
     
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeRight) {
-        textView.frame = CGRectMake(0, bannerHeight, deviceHeight, deviceWidth-([self getTopHeight]+bannerHeight+kbSize.width));
-    } else if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-        textView.frame = CGRectMake(0, bannerHeight, deviceWidth, deviceHeight-([self getTopHeight]+bannerHeight+kbSize.height));
-    }
+    self.keyboardHeight.constant = kbSize.height;
+    NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+        
+    [UIView animateWithDuration:animationDuration animations:^{
+        [self.view layoutIfNeeded];
+    }];
     
     [UIView commitAnimations];    
 }
@@ -172,28 +161,32 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     
-    float deviceHeight = [[UIScreen mainScreen] bounds].size.height;
-    float deviceWidth = [[UIScreen mainScreen] bounds].size.width;
-
-    float bannerHeight = 0.0f;
 #ifdef SIMPLE_ROT_13_FREE
-    if (bannerIsVisible) {
+    float bannerHeight = 0.0f;
+    if (self.bannerIsVisible) {
         bannerHeight = [self getBannerHeight];
     } else {
         bannerHeight = 0.0f;
     }
+    self.bannerHeight.constant = bannerHeight;
 #endif
     
-    if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeRight) {
-        textView.frame = CGRectMake(0, bannerHeight, deviceHeight, deviceWidth-([self getTopHeight]+bannerHeight));
-    } else if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-        textView.frame = CGRectMake(0, bannerHeight, deviceWidth, deviceHeight-([self getTopHeight]+bannerHeight));
-    }
+    NSDictionary* info = [aNotification userInfo];
+    self.keyboardHeight.constant = 0.0f;
+    NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    [UIView animateWithDuration:animationDuration animations:^{
+        [self.view layoutIfNeeded];
+    }];
+    
+    [UIView commitAnimations];
+
     
     [UIView commitAnimations];
 }
 
 - (void)registerForKeyboardNotifications {
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWasShown:)
                                                  name:UIKeyboardDidShowNotification object:nil];
@@ -210,7 +203,7 @@
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (event.type == UIEventSubtypeMotionShake) {
         if (self.undoValue != nil && ![self.undoValue isEqualToString:@""]) {
-            textView.text = undoValue;
+            self.textView.text = self.undoValue;
         }
     }
 }
@@ -220,8 +213,8 @@
 #pragma mark - Cipher functions
 // This function calculate MD2 hash of input text
 - (void)cipherMd2 {
-    NSString *textViewValue = textView.text;
-    self.undoValue = textView.text;
+    NSString *textViewValue = self.textView.text;
+    self.undoValue = self.textView.text;
     
     // Create pointer to the string as UTF8
     const char *ptr = [textViewValue UTF8String];
@@ -237,13 +230,13 @@
     for(int i = 0; i < CC_MD2_DIGEST_LENGTH; i++)
         [output appendFormat:@"%02x",hashBuffer[i]];
     
-    textView.text = output;
+    self.textView.text = output;
 }
 
 // This function calculate MD4 hash of input text
 - (void)cipherMd4 {
-    NSString *textViewValue = textView.text;
-    self.undoValue = textView.text;
+    NSString *textViewValue = self.textView.text;
+    self.undoValue = self.textView.text;
     
     // Create pointer to the string as UTF8
     const char *ptr = [textViewValue UTF8String];
@@ -259,13 +252,13 @@
     for(int i = 0; i < CC_MD4_DIGEST_LENGTH; i++)
         [output appendFormat:@"%02x",hashBuffer[i]];
     
-    textView.text = output;
+    self.textView.text = output;
 }
 
 // This function calculate MD5 hash of input text
 - (void)cipherMd5 {
-    NSString *textViewValue = textView.text;
-    self.undoValue = textView.text;
+    NSString *textViewValue = self.textView.text;
+    self.undoValue = self.textView.text;
     
     // Create pointer to the string as UTF8
     const char *ptr = [textViewValue UTF8String];
@@ -281,14 +274,14 @@
     for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
         [output appendFormat:@"%02x",hashBuffer[i]];
     
-    textView.text = output;
+    self.textView.text = output;
 }
 
 // This function encode input text using l33t rot13 algorithm
 - (void)cipherRot13 {
     
-    NSString *textViewValue = textView.text;
-    self.undoValue = textView.text;
+    NSString *textViewValue = self.textView.text;
+    self.undoValue = self.textView.text;
     
     NSString *alphabet = @"abcdefghijklmnopqrstuvwxyz";
     NSMutableDictionary *rot13Map = [NSMutableDictionary dictionaryWithCapacity:52];
@@ -317,14 +310,14 @@
         }
     }
     
-    textView.text = converted;
+    self.textView.text = converted;
 }
 
 // This function encode input text using l33t rot13 algorithm
 - (void)cipherRot13Leet {
     
-    NSString *textViewValue = textView.text;
-    self.undoValue = textView.text;
+    NSString *textViewValue = self.textView.text;
+    self.undoValue = self.textView.text;
     
     NSString *alphabet  = @"abcdefghijklmnopqrstuvwxyz";
     NSString *leetLower = @"48cd3f9h!jk1mn0pqr57uvwxy2";
@@ -356,13 +349,13 @@
         }
     }
     
-    textView.text = converted;
+    self.textView.text = converted;
 }
 
 // This function encode input text using rot47 algorithm
 - (void)cipherRot47 {
-    NSString *textViewValue = textView.text;
-    self.undoValue = textView.text;
+    NSString *textViewValue = self.textView.text;
+    self.undoValue = self.textView.text;
     
     NSString *source = @"!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
     
@@ -386,14 +379,14 @@
         }
     }
     
-    textView.text = converted;
+    self.textView.text = converted;
     
 }
 
 // This function calculate SHA-1 hash of input text
 - (void)cipherSha1 {
-    NSString *textViewValue = textView.text;
-    self.undoValue = textView.text;
+    NSString *textViewValue = self.textView.text;
+    self.undoValue = self.textView.text;
     
     // Create pointer to the string as UTF8
     const char *ptr = [textViewValue UTF8String];
@@ -409,13 +402,13 @@
     for(int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++)
         [output appendFormat:@"%02x",hashBuffer[i]];
     
-    textView.text = output;
+    self.textView.text = output;
 }
 
 // This function calculate SHA-224 hash of input text
 - (void)cipherSha224 {
-    NSString *textViewValue = textView.text;
-    self.undoValue = textView.text;
+    NSString *textViewValue = self.textView.text;
+    self.undoValue = self.textView.text;
     
     // Create pointer to the string as UTF8
     const char *ptr = [textViewValue UTF8String];
@@ -431,13 +424,13 @@
     for(int i = 0; i < CC_SHA224_DIGEST_LENGTH; i++)
         [output appendFormat:@"%02x",hashBuffer[i]];
     
-    textView.text = output;
+    self.textView.text = output;
 }
 
 // This function calculate SHA-256 hash of input text
 - (void)cipherSha256 {
-    NSString *textViewValue = textView.text;
-    self.undoValue = textView.text;
+    NSString *textViewValue = self.textView.text;
+    self.undoValue = self.textView.text;
     
     // Create pointer to the string as UTF8
     const char *ptr = [textViewValue UTF8String];
@@ -453,13 +446,13 @@
     for(int i = 0; i < CC_SHA256_DIGEST_LENGTH; i++)
         [output appendFormat:@"%02x",hashBuffer[i]];
     
-    textView.text = output;
+    self.textView.text = output;
 }
 
 // This function calculate SHA-384 hash of input text
 - (void)cipherSha384 {
-    NSString *textViewValue = textView.text;
-    self.undoValue = textView.text;
+    NSString *textViewValue = self.textView.text;
+    self.undoValue = self.textView.text;
     
     // Create pointer to the string as UTF8
     const char *ptr = [textViewValue UTF8String];
@@ -475,13 +468,13 @@
     for(int i = 0; i < CC_SHA384_DIGEST_LENGTH; i++)
         [output appendFormat:@"%02x",hashBuffer[i]];
     
-    textView.text = output;
+    self.textView.text = output;
 }
 
 // This function calculate SHA-512 hash of input text
 - (void)cipherSha512 {
-    NSString *textViewValue = textView.text;
-    self.undoValue = textView.text;
+    NSString *textViewValue = self.textView.text;
+    self.undoValue = self.textView.text;
     
     // Create pointer to the string as UTF8
     const char *ptr = [textViewValue UTF8String];
@@ -497,7 +490,7 @@
     for(int i = 0; i < CC_SHA512_DIGEST_LENGTH; i++) 
         [output appendFormat:@"%02x",hashBuffer[i]];
     
-    textView.text = output;
+    self.textView.text = output;
 }
 
 
@@ -549,14 +542,14 @@
     selectorViewController.parentView = self;
 
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        if(![popoverController isPopoverVisible]){
+        if(![self.uiPopoverController isPopoverVisible]){
             // Popover is not visible
-            popoverController = [[UIPopoverController alloc] initWithContentViewController:selectorViewController];
-            [popoverController setPopoverContentSize: CGSizeMake(320.0, selectorViewController.tableView.rowHeight * 6.5) animated:YES];
-            [popoverController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+            self.uiPopoverController = [[UIPopoverController alloc] initWithContentViewController:selectorViewController];
+            [self.uiPopoverController setPopoverContentSize: CGSizeMake(320.0, selectorViewController.tableView.rowHeight * 6.5) animated:YES];
+            [self.uiPopoverController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
         }else{
-            [popoverController dismissPopoverAnimated:YES];
-            popoverController = nil;
+            [self.uiPopoverController dismissPopoverAnimated:YES];
+            self.uiPopoverController = nil;
         }
         
     } else {
@@ -582,7 +575,7 @@
 
 #ifdef SIMPLE_ROT_13_FREE
 - (float) getBannerHeight {
-    return adView.frame.size.height;
+    return self.adView.frame.size.height;
 }
 #endif
 

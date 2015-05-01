@@ -17,8 +17,8 @@
 		3B3EB1D81AF3B46200FBE8F3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EB1D71AF3B46200FBE8F3 /* Settings.bundle */; };
 		3B3EB1DA1AF3B46F00FBE8F3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EB1D91AF3B46F00FBE8F3 /* Settings.bundle */; };
 		3B3EB1DC1AF3B77700FBE8F3 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3EB1DB1AF3B77700FBE8F3 /* iAd.framework */; };
+		3B4C181F1AF4085B008168C4 /* Simple_ROT13ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B4C181E1AF4085B008168C4 /* Simple_ROT13ViewController.xib */; };
 		3B793C7C1AF3ADBB005E7C2A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BA1515D61800CD401B /* MainWindow.xib */; };
-		3B793C7E1AF3ADBB005E7C2A /* Simple_ROT13ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BC1515D62500CD401B /* Simple_ROT13ViewController.xib */; };
 		3B793C811AF3ADBB005E7C2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B8A33DA135F30E500A490FF /* Localizable.strings */; };
 		3B793C821AF3ADBB005E7C2A /* AlgorithmSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBE82DE135F4EDF00D68299 /* AlgorithmSelectorViewController.xib */; };
 		3B793C841AF3ADBB005E7C2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -70,6 +70,7 @@
 		3B3EB1D71AF3B46200FBE8F3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "Simple ROT13 Free/Settings.bundle"; sourceTree = "<group>"; };
 		3B3EB1D91AF3B46F00FBE8F3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "Simple ROT13 Premium/Settings.bundle"; sourceTree = "<group>"; };
 		3B3EB1DB1AF3B77700FBE8F3 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		3B4C181E1AF4085B008168C4 /* Simple_ROT13ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Simple_ROT13ViewController.xib; path = "Simple ROT13 Free/Simple_ROT13ViewController.xib"; sourceTree = "<group>"; };
 		3B793C901AF3ADBB005E7C2A /* Simple ROT13 Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple ROT13 Free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B793CA81AF3AE0B005E7C2A /* Simple ROT13 Premium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple ROT13 Premium.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8A33D9135F30E500A490FF /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -193,6 +194,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3B4C181D1AF40840008168C4 /* Simple ROT13 Free */ = {
+			isa = PBXGroup;
+			children = (
+				3B4C181E1AF4085B008168C4 /* Simple_ROT13ViewController.xib */,
+			);
+			name = "Simple ROT13 Free";
+			sourceTree = "<group>";
+		};
 		3B793CAE1AF3B0EF005E7C2A /* Simple ROT13 */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +241,7 @@
 		3BD4601C1515D4D300854AEF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3B4C181D1AF40840008168C4 /* Simple ROT13 Free */,
 				3BAAD0EA1372C2DD00284AC7 /* AlgorithmSelectorViewController.h */,
 				3BAAD0EB1372C2DD00284AC7 /* AlgorithmSelectorViewController.m */,
 				3BBE82DE135F4EDF00D68299 /* AlgorithmSelectorViewController.xib */,
@@ -370,10 +380,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4C181F1AF4085B008168C4 /* Simple_ROT13ViewController.xib in Resources */,
 				3B793C7C1AF3ADBB005E7C2A /* MainWindow.xib in Resources */,
 				3BB1F8B91AF3B1E00041EF7C /* SimpleROT13Free.xcassets in Resources */,
 				3BB1F8B71AF3B1E00041EF7C /* iTunesArtwork in Resources */,
-				3B793C7E1AF3ADBB005E7C2A /* Simple_ROT13ViewController.xib in Resources */,
 				3B793C811AF3ADBB005E7C2A /* Localizable.strings in Resources */,
 				3B793C821AF3ADBB005E7C2A /* AlgorithmSelectorViewController.xib in Resources */,
 				3B3EB1D81AF3B46200FBE8F3 /* Settings.bundle in Resources */,

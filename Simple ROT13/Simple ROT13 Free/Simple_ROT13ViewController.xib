@@ -6,7 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Simple_ROT13ViewController">
             <connections>
-                <outlet property="bannerHeight" destination="C33-IO-xul" id="Eb5-Bd-PY7"/>
+                <outlet property="adView" destination="IYu-2X-agT" id="m5L-VG-3AB"/>
+                <outlet property="bannerTop" destination="lUq-bl-iaJ" id="p1o-gh-YAT"/>
                 <outlet property="keyboardHeight" destination="rSa-ZB-3Q8" id="a04-1L-uc4"/>
                 <outlet property="textView" destination="12" id="20"/>
                 <outlet property="view" destination="6" id="l1v-gb-rW4"/>
@@ -18,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                    <rect key="frame" x="0.0" y="50" width="320" height="366"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -26,13 +27,19 @@
                         <outlet property="delegate" destination="6" id="17"/>
                     </connections>
                 </textView>
+                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="IYu-2X-agT">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                </adBannerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="12" secondAttribute="trailing" id="9qr-jt-txb"/>
                 <constraint firstItem="12" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="BgF-7v-s3j"/>
-                <constraint firstItem="12" firstAttribute="top" secondItem="6" secondAttribute="top" id="C33-IO-xul"/>
+                <constraint firstItem="IYu-2X-agT" firstAttribute="top" secondItem="6" secondAttribute="top" id="lUq-bl-iaJ"/>
                 <constraint firstAttribute="bottom" secondItem="12" secondAttribute="bottom" id="rSa-ZB-3Q8"/>
+                <constraint firstItem="12" firstAttribute="top" secondItem="IYu-2X-agT" secondAttribute="bottom" id="rjJ-KQ-URt"/>
+                <constraint firstAttribute="trailing" secondItem="IYu-2X-agT" secondAttribute="trailing" id="uhT-fi-Rde"/>
+                <constraint firstItem="IYu-2X-agT" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="yb7-Ag-LIG"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

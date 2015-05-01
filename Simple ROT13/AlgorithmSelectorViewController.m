@@ -226,7 +226,7 @@ static NSString *const kTitleKey = @"title";
         self.parentView.chooseAlgoButton.title = name;
     }
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        [self.parentView.popoverController dismissPopoverAnimated:YES];
+        [self.parentView.uiPopoverController dismissPopoverAnimated:YES];
     } else {
         [self dismissViewControllerAnimated:YES completion:NULL];
     }

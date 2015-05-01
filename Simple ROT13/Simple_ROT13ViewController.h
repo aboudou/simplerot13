@@ -16,13 +16,17 @@
 @property (nonatomic, weak) IBOutlet UITextView *textView;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *chooseAlgoButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *cipherButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyboardHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bannerHeight;
+
 
 @property (nonatomic, strong) NSString *undoValue;
-@property (nonatomic, strong) UIPopoverController *popoverController;
+@property (nonatomic, strong) UIPopoverController *uiPopoverController;
 
 #ifdef SIMPLE_ROT_13_FREE
-@property (nonatomic, strong) ADBannerView *adView;
 @property (nonatomic, assign) BOOL bannerIsVisible;
+@property (nonatomic, weak) IBOutlet ADBannerView *adView;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *bannerTop;
 #endif
 
 - (IBAction)chooseAlgoButtonPressed:(id)sender;
