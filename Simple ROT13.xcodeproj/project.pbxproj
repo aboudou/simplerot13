@@ -13,15 +13,46 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3B30E8B91515D61800CD401B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BA1515D61800CD401B /* MainWindow.xib */; };
 		3B30E8BB1515D62500CD401B /* Simple_ROT13ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BC1515D62500CD401B /* Simple_ROT13ViewController.xib */; };
+		3B3EB1D61AF3B45800FBE8F3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EB1D51AF3B45800FBE8F3 /* Settings.bundle */; };
+		3B3EB1D81AF3B46200FBE8F3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EB1D71AF3B46200FBE8F3 /* Settings.bundle */; };
+		3B3EB1DA1AF3B46F00FBE8F3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EB1D91AF3B46F00FBE8F3 /* Settings.bundle */; };
+		3B3EB1DC1AF3B77700FBE8F3 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3EB1DB1AF3B77700FBE8F3 /* iAd.framework */; };
+		3B793C7C1AF3ADBB005E7C2A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BA1515D61800CD401B /* MainWindow.xib */; };
+		3B793C7E1AF3ADBB005E7C2A /* Simple_ROT13ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BC1515D62500CD401B /* Simple_ROT13ViewController.xib */; };
+		3B793C811AF3ADBB005E7C2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B8A33DA135F30E500A490FF /* Localizable.strings */; };
+		3B793C821AF3ADBB005E7C2A /* AlgorithmSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBE82DE135F4EDF00D68299 /* AlgorithmSelectorViewController.xib */; };
+		3B793C841AF3ADBB005E7C2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		3B793C851AF3ADBB005E7C2A /* Algo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0E91372C2DD00284AC7 /* Algo.m */; };
+		3B793C861AF3ADBB005E7C2A /* AlgorithmSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0EB1372C2DD00284AC7 /* AlgorithmSelectorViewController.m */; };
+		3B793C871AF3ADBB005E7C2A /* Simple_ROT13AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0ED1372C2DD00284AC7 /* Simple_ROT13AppDelegate.m */; };
+		3B793C881AF3ADBB005E7C2A /* Simple_ROT13ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0EF1372C2DD00284AC7 /* Simple_ROT13ViewController.m */; };
+		3B793C8A1AF3ADBB005E7C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		3B793C8B1AF3ADBB005E7C2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		3B793C8C1AF3ADBB005E7C2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		3B793C941AF3AE0B005E7C2A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BA1515D61800CD401B /* MainWindow.xib */; };
+		3B793C961AF3AE0B005E7C2A /* Simple_ROT13ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E8BC1515D62500CD401B /* Simple_ROT13ViewController.xib */; };
+		3B793C991AF3AE0B005E7C2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B8A33DA135F30E500A490FF /* Localizable.strings */; };
+		3B793C9A1AF3AE0B005E7C2A /* AlgorithmSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBE82DE135F4EDF00D68299 /* AlgorithmSelectorViewController.xib */; };
+		3B793C9C1AF3AE0B005E7C2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		3B793C9D1AF3AE0B005E7C2A /* Algo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0E91372C2DD00284AC7 /* Algo.m */; };
+		3B793C9E1AF3AE0B005E7C2A /* AlgorithmSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0EB1372C2DD00284AC7 /* AlgorithmSelectorViewController.m */; };
+		3B793C9F1AF3AE0B005E7C2A /* Simple_ROT13AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0ED1372C2DD00284AC7 /* Simple_ROT13AppDelegate.m */; };
+		3B793CA01AF3AE0B005E7C2A /* Simple_ROT13ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0EF1372C2DD00284AC7 /* Simple_ROT13ViewController.m */; };
+		3B793CA21AF3AE0B005E7C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		3B793CA31AF3AE0B005E7C2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		3B793CA41AF3AE0B005E7C2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3B8A33D8135F30E500A490FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B8A33DA135F30E500A490FF /* Localizable.strings */; };
 		3BAAD0F01372C2DD00284AC7 /* Algo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0E91372C2DD00284AC7 /* Algo.m */; };
 		3BAAD0F11372C2DD00284AC7 /* AlgorithmSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0EB1372C2DD00284AC7 /* AlgorithmSelectorViewController.m */; };
 		3BAAD0F21372C2DD00284AC7 /* Simple_ROT13AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0ED1372C2DD00284AC7 /* Simple_ROT13AppDelegate.m */; };
 		3BAAD0F31372C2DD00284AC7 /* Simple_ROT13ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAD0EF1372C2DD00284AC7 /* Simple_ROT13ViewController.m */; };
-		3BAE57DD18E4BBC100D30C7B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3BAE57DC18E4BBC100D30C7B /* Settings.bundle */; };
-		3BAE57E118E4BC9500D30C7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BAE57E018E4BC9500D30C7B /* Images.xcassets */; };
+		3BB1F8B71AF3B1E00041EF7C /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3BB1F8B41AF3B1E00041EF7C /* iTunesArtwork */; };
+		3BB1F8B91AF3B1E00041EF7C /* SimpleROT13Free.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB1F8B61AF3B1E00041EF7C /* SimpleROT13Free.xcassets */; };
+		3BB1F8BD1AF3B1F00041EF7C /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3BB1F8BA1AF3B1F00041EF7C /* iTunesArtwork */; };
+		3BB1F8BF1AF3B1F00041EF7C /* SimpleROT13.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB1F8BC1AF3B1F00041EF7C /* SimpleROT13.xcassets */; };
+		3BB1F8C31AF3B2020041EF7C /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3BB1F8C01AF3B2020041EF7C /* iTunesArtwork */; };
+		3BB1F8C51AF3B2020041EF7C /* SimpleROT13Premium.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB1F8C21AF3B2020041EF7C /* SimpleROT13Premium.xcassets */; };
 		3BBE82E0135F4EDF00D68299 /* AlgorithmSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBE82DE135F4EDF00D68299 /* AlgorithmSelectorViewController.xib */; };
-		B6E1322512A692EC00D38AF8 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = B6E1322412A692EC00D38AF8 /* iTunesArtwork */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +61,17 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* Simple_ROT13_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simple_ROT13_Prefix.pch; sourceTree = "<group>"; };
 		3B30E8BA1515D61800CD401B /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		3B30E8BC1515D62500CD401B /* Simple_ROT13ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Simple_ROT13ViewController.xib; sourceTree = "<group>"; };
+		3B3EB1D21AF3B39B00FBE8F3 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = "Simple ROT13/Prefix.pch"; sourceTree = "<group>"; };
+		3B3EB1D31AF3B3A700FBE8F3 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = "Simple ROT13 Free/Prefix.pch"; sourceTree = "<group>"; };
+		3B3EB1D41AF3B3C200FBE8F3 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = "Simple ROT13 Premium/Prefix.pch"; sourceTree = "<group>"; };
+		3B3EB1D51AF3B45800FBE8F3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "Simple ROT13/Settings.bundle"; sourceTree = "<group>"; };
+		3B3EB1D71AF3B46200FBE8F3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "Simple ROT13 Free/Settings.bundle"; sourceTree = "<group>"; };
+		3B3EB1D91AF3B46F00FBE8F3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "Simple ROT13 Premium/Settings.bundle"; sourceTree = "<group>"; };
+		3B3EB1DB1AF3B77700FBE8F3 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		3B793C901AF3ADBB005E7C2A /* Simple ROT13 Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple ROT13 Free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B793CA81AF3AE0B005E7C2A /* Simple ROT13 Premium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple ROT13 Premium.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8A33D9135F30E500A490FF /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B8A33DB135F30ED00A490FF /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3BAAD0E81372C2DD00284AC7 /* Algo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algo.h; sourceTree = "<group>"; };
@@ -43,11 +82,16 @@
 		3BAAD0ED1372C2DD00284AC7 /* Simple_ROT13AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Simple_ROT13AppDelegate.m; sourceTree = "<group>"; };
 		3BAAD0EE1372C2DD00284AC7 /* Simple_ROT13ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simple_ROT13ViewController.h; sourceTree = "<group>"; };
 		3BAAD0EF1372C2DD00284AC7 /* Simple_ROT13ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Simple_ROT13ViewController.m; sourceTree = "<group>"; };
-		3BAE57DC18E4BBC100D30C7B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		3BAE57E018E4BC9500D30C7B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3BB1F8B41AF3B1E00041EF7C /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = "Simple ROT13 Free/iTunesArtwork"; sourceTree = "<group>"; };
+		3BB1F8B51AF3B1E00041EF7C /* Simple ROT13 Free.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Simple ROT13 Free.plist"; path = "Simple ROT13 Free/Simple ROT13 Free.plist"; sourceTree = "<group>"; };
+		3BB1F8B61AF3B1E00041EF7C /* SimpleROT13Free.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SimpleROT13Free.xcassets; path = "Simple ROT13 Free/SimpleROT13Free.xcassets"; sourceTree = "<group>"; };
+		3BB1F8BA1AF3B1F00041EF7C /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = "Simple ROT13/iTunesArtwork"; sourceTree = "<group>"; };
+		3BB1F8BB1AF3B1F00041EF7C /* Simple ROT13.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Simple ROT13.plist"; path = "Simple ROT13/Simple ROT13.plist"; sourceTree = "<group>"; };
+		3BB1F8BC1AF3B1F00041EF7C /* SimpleROT13.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SimpleROT13.xcassets; path = "Simple ROT13/SimpleROT13.xcassets"; sourceTree = "<group>"; };
+		3BB1F8C01AF3B2020041EF7C /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = "Simple ROT13 Premium/iTunesArtwork"; sourceTree = "<group>"; };
+		3BB1F8C11AF3B2020041EF7C /* Simple ROT13 Premium.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Simple ROT13 Premium.plist"; path = "Simple ROT13 Premium/Simple ROT13 Premium.plist"; sourceTree = "<group>"; };
+		3BB1F8C21AF3B2020041EF7C /* SimpleROT13Premium.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SimpleROT13Premium.xcassets; path = "Simple ROT13 Premium/SimpleROT13Premium.xcassets"; sourceTree = "<group>"; };
 		3BBE82DE135F4EDF00D68299 /* AlgorithmSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlgorithmSelectorViewController.xib; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		B6E1322412A692EC00D38AF8 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = text; path = iTunesArtwork; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +102,27 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B793C891AF3ADBB005E7C2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B3EB1DC1AF3B77700FBE8F3 /* iAd.framework in Frameworks */,
+				3B793C8A1AF3ADBB005E7C2A /* Foundation.framework in Frameworks */,
+				3B793C8B1AF3ADBB005E7C2A /* UIKit.framework in Frameworks */,
+				3B793C8C1AF3ADBB005E7C2A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B793CA11AF3AE0B005E7C2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B793CA21AF3AE0B005E7C2A /* Foundation.framework in Frameworks */,
+				3B793CA31AF3AE0B005E7C2A /* UIKit.framework in Frameworks */,
+				3B793CA41AF3AE0B005E7C2A /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* Simple ROT13.app */,
+				3B793C901AF3ADBB005E7C2A /* Simple ROT13 Free.app */,
+				3B793CA81AF3AE0B005E7C2A /* Simple ROT13 Premium.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,7 +164,6 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* Simple_ROT13_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -107,11 +173,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3BAE57E018E4BC9500D30C7B /* Images.xcassets */,
-				B6E1322412A692EC00D38AF8 /* iTunesArtwork */,
-				8D1107310486CEB800E47090 /* Info.plist */,
+				3B793CB01AF3B0FF005E7C2A /* Simple ROT13 Free */,
+				3B793CAE1AF3B0EF005E7C2A /* Simple ROT13 */,
+				3B793CB11AF3B10A005E7C2A /* Simple ROT13 Premium */,
 				3B8A33DA135F30E500A490FF /* Localizable.strings */,
-				3BAE57DC18E4BBC100D30C7B /* Settings.bundle */,
 			);
 			name = Resources;
 			path = "Simple ROT13";
@@ -120,11 +185,48 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B3EB1DB1AF3B77700FBE8F3 /* iAd.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B793CAE1AF3B0EF005E7C2A /* Simple ROT13 */ = {
+			isa = PBXGroup;
+			children = (
+				3BB1F8BA1AF3B1F00041EF7C /* iTunesArtwork */,
+				3B3EB1D21AF3B39B00FBE8F3 /* Prefix.pch */,
+				3B3EB1D51AF3B45800FBE8F3 /* Settings.bundle */,
+				3BB1F8BB1AF3B1F00041EF7C /* Simple ROT13.plist */,
+				3BB1F8BC1AF3B1F00041EF7C /* SimpleROT13.xcassets */,
+			);
+			name = "Simple ROT13";
+			sourceTree = "<group>";
+		};
+		3B793CB01AF3B0FF005E7C2A /* Simple ROT13 Free */ = {
+			isa = PBXGroup;
+			children = (
+				3BB1F8B41AF3B1E00041EF7C /* iTunesArtwork */,
+				3B3EB1D31AF3B3A700FBE8F3 /* Prefix.pch */,
+				3B3EB1D71AF3B46200FBE8F3 /* Settings.bundle */,
+				3BB1F8B51AF3B1E00041EF7C /* Simple ROT13 Free.plist */,
+				3BB1F8B61AF3B1E00041EF7C /* SimpleROT13Free.xcassets */,
+			);
+			name = "Simple ROT13 Free";
+			sourceTree = "<group>";
+		};
+		3B793CB11AF3B10A005E7C2A /* Simple ROT13 Premium */ = {
+			isa = PBXGroup;
+			children = (
+				3BB1F8C01AF3B2020041EF7C /* iTunesArtwork */,
+				3B3EB1D41AF3B3C200FBE8F3 /* Prefix.pch */,
+				3B3EB1D91AF3B46F00FBE8F3 /* Settings.bundle */,
+				3BB1F8C11AF3B2020041EF7C /* Simple ROT13 Premium.plist */,
+				3BB1F8C21AF3B2020041EF7C /* SimpleROT13Premium.xcassets */,
+			);
+			name = "Simple ROT13 Premium";
 			sourceTree = "<group>";
 		};
 		3BD4601C1515D4D300854AEF /* Controllers */ = {
@@ -172,16 +274,56 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* Simple ROT13.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3B793C7A1AF3ADBB005E7C2A /* Simple ROT13 Free */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B793C8D1AF3ADBB005E7C2A /* Build configuration list for PBXNativeTarget "Simple ROT13 Free" */;
+			buildPhases = (
+				3B793C7B1AF3ADBB005E7C2A /* Resources */,
+				3B793C831AF3ADBB005E7C2A /* Sources */,
+				3B793C891AF3ADBB005E7C2A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simple ROT13 Free";
+			productName = "Simple ROT13";
+			productReference = 3B793C901AF3ADBB005E7C2A /* Simple ROT13 Free.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B793C921AF3AE0B005E7C2A /* Simple ROT13 Premium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B793CA51AF3AE0B005E7C2A /* Build configuration list for PBXNativeTarget "Simple ROT13 Premium" */;
+			buildPhases = (
+				3B793C931AF3AE0B005E7C2A /* Resources */,
+				3B793C9B1AF3AE0B005E7C2A /* Sources */,
+				3B793CA11AF3AE0B005E7C2A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simple ROT13 Premium";
+			productName = "Simple ROT13";
+			productReference = 3B793CA81AF3AE0B005E7C2A /* Simple ROT13 Premium.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = aboudou;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = GBBYECNDQ9;
+					};
+					3B793C7A1AF3ADBB005E7C2A = {
+						DevelopmentTeam = GBBYECNDQ9;
+					};
+					3B793C921AF3AE0B005E7C2A = {
 						DevelopmentTeam = GBBYECNDQ9;
 					};
 				};
@@ -202,7 +344,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				3B793C7A1AF3ADBB005E7C2A /* Simple ROT13 Free */,
 				1D6058900D05DD3D006BFB54 /* Simple ROT13 */,
+				3B793C921AF3AE0B005E7C2A /* Simple ROT13 Premium */,
 			);
 		};
 /* End PBXProject section */
@@ -213,12 +357,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B30E8B91515D61800CD401B /* MainWindow.xib in Resources */,
-				3BAE57E118E4BC9500D30C7B /* Images.xcassets in Resources */,
+				3BB1F8BD1AF3B1F00041EF7C /* iTunesArtwork in Resources */,
+				3BB1F8BF1AF3B1F00041EF7C /* SimpleROT13.xcassets in Resources */,
 				3B30E8BB1515D62500CD401B /* Simple_ROT13ViewController.xib in Resources */,
-				B6E1322512A692EC00D38AF8 /* iTunesArtwork in Resources */,
-				3BAE57DD18E4BBC100D30C7B /* Settings.bundle in Resources */,
 				3B8A33D8135F30E500A490FF /* Localizable.strings in Resources */,
 				3BBE82E0135F4EDF00D68299 /* AlgorithmSelectorViewController.xib in Resources */,
+				3B3EB1D61AF3B45800FBE8F3 /* Settings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B793C7B1AF3ADBB005E7C2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B793C7C1AF3ADBB005E7C2A /* MainWindow.xib in Resources */,
+				3BB1F8B91AF3B1E00041EF7C /* SimpleROT13Free.xcassets in Resources */,
+				3BB1F8B71AF3B1E00041EF7C /* iTunesArtwork in Resources */,
+				3B793C7E1AF3ADBB005E7C2A /* Simple_ROT13ViewController.xib in Resources */,
+				3B793C811AF3ADBB005E7C2A /* Localizable.strings in Resources */,
+				3B793C821AF3ADBB005E7C2A /* AlgorithmSelectorViewController.xib in Resources */,
+				3B3EB1D81AF3B46200FBE8F3 /* Settings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B793C931AF3AE0B005E7C2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B793C941AF3AE0B005E7C2A /* MainWindow.xib in Resources */,
+				3BB1F8C51AF3B2020041EF7C /* SimpleROT13Premium.xcassets in Resources */,
+				3BB1F8C31AF3B2020041EF7C /* iTunesArtwork in Resources */,
+				3B793C961AF3AE0B005E7C2A /* Simple_ROT13ViewController.xib in Resources */,
+				3B793C991AF3AE0B005E7C2A /* Localizable.strings in Resources */,
+				3B793C9A1AF3AE0B005E7C2A /* AlgorithmSelectorViewController.xib in Resources */,
+				3B3EB1DA1AF3B46F00FBE8F3 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +406,30 @@
 				3BAAD0F11372C2DD00284AC7 /* AlgorithmSelectorViewController.m in Sources */,
 				3BAAD0F21372C2DD00284AC7 /* Simple_ROT13AppDelegate.m in Sources */,
 				3BAAD0F31372C2DD00284AC7 /* Simple_ROT13ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B793C831AF3ADBB005E7C2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B793C841AF3ADBB005E7C2A /* main.m in Sources */,
+				3B793C851AF3ADBB005E7C2A /* Algo.m in Sources */,
+				3B793C861AF3ADBB005E7C2A /* AlgorithmSelectorViewController.m in Sources */,
+				3B793C871AF3ADBB005E7C2A /* Simple_ROT13AppDelegate.m in Sources */,
+				3B793C881AF3ADBB005E7C2A /* Simple_ROT13ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B793C9B1AF3AE0B005E7C2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B793C9C1AF3AE0B005E7C2A /* main.m in Sources */,
+				3B793C9D1AF3AE0B005E7C2A /* Algo.m in Sources */,
+				3B793C9E1AF3AE0B005E7C2A /* AlgorithmSelectorViewController.m in Sources */,
+				3B793C9F1AF3AE0B005E7C2A /* Simple_ROT13AppDelegate.m in Sources */,
+				3B793CA01AF3AE0B005E7C2A /* Simple_ROT13ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,10 +461,10 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Simple ROT13/Simple_ROT13_Prefix.pch";
+				GCC_PREFIX_HEADER = "Simple ROT13/Simple ROT13/Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
-				INFOPLIST_FILE = "Simple ROT13/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = "$(SRCROOT)/Simple ROT13/Simple ROT13/Simple ROT13.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "Simple ROT13";
 				PROVISIONING_PROFILE = "0ab9900a-d747-40ed-9b4c-a4ed68945bcb";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -286,12 +482,102 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Simple ROT13/Simple_ROT13_Prefix.pch";
+				GCC_PREFIX_HEADER = "Simple ROT13/Simple ROT13/Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
-				INFOPLIST_FILE = "Simple ROT13/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = "$(SRCROOT)/Simple ROT13/Simple ROT13/Simple ROT13.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "Simple ROT13";
 				PROVISIONING_PROFILE = "1ef3be80-2f20-4ca3-b9d6-dfc98bd666bc";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B793C8E1AF3ADBB005E7C2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simple ROT13/Simple ROT13 Free/Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/Simple ROT13/Simple ROT13 Free/Simple ROT13 Free.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "Simple ROT13 Free";
+				PROVISIONING_PROFILE = "77c47f1b-dc55-478d-9ad9-1e365bae01f1";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B793C8F1AF3ADBB005E7C2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simple ROT13/Simple ROT13 Free/Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/Simple ROT13/Simple ROT13 Free/Simple ROT13 Free.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "Simple ROT13 Free";
+				PROVISIONING_PROFILE = "fad1cf11-3311-40ff-9f35-3cb58796b777";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B793CA61AF3AE0B005E7C2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simple ROT13/Simple ROT13 Premium/Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/Simple ROT13/Simple ROT13 Premium/Simple ROT13 Premium.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "Simple ROT13 Premium";
+				PROVISIONING_PROFILE = "b6811bc9-4292-4919-969e-e08eefde94e3";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B793CA71AF3AE0B005E7C2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simple ROT13/Simple ROT13 Premium/Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/Simple ROT13/Simple ROT13 Premium/Simple ROT13 Premium.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "Simple ROT13 Premium";
+				PROVISIONING_PROFILE = "d1ba4099-1578-4647-aca9-41e1a2183512";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -306,9 +592,12 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Arnaud Boudou (RTC3674WRG)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -335,9 +624,12 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Arnaud Boudou";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -363,6 +655,24 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B793C8D1AF3ADBB005E7C2A /* Build configuration list for PBXNativeTarget "Simple ROT13 Free" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B793C8E1AF3ADBB005E7C2A /* Debug */,
+				3B793C8F1AF3ADBB005E7C2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B793CA51AF3AE0B005E7C2A /* Build configuration list for PBXNativeTarget "Simple ROT13 Premium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B793CA61AF3AE0B005E7C2A /* Debug */,
+				3B793CA71AF3AE0B005E7C2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

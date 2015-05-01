@@ -7,18 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-
-@interface Simple_ROT13ViewController : UIViewController {
+@interface Simple_ROT13ViewController : UIViewController <ADBannerViewDelegate> {
 
 }
 
-@property (nonatomic, strong) IBOutlet UITextView *textView;
-@property (nonatomic, strong) IBOutlet UIBarButtonItem *chooseAlgoButton;
-@property (nonatomic, strong) IBOutlet UIBarButtonItem *cipherButton;
+@property (nonatomic, weak) IBOutlet UITextView *textView;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *chooseAlgoButton;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *cipherButton;
 
 @property (nonatomic, strong) NSString *undoValue;
 @property (nonatomic, strong) UIPopoverController *popoverController;
+
+#ifdef SIMPLE_ROT_13_FREE
+@property (nonatomic, strong) ADBannerView *adView;
+@property (nonatomic, assign) BOOL bannerIsVisible;
+#endif
 
 - (IBAction)chooseAlgoButtonPressed:(id)sender;
 

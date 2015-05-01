@@ -4,15 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Simple ROT13.xcscheme</key>
+		<key>Simple ROT13 Free.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>Simple ROT13 Premium.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Simple ROT13.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1D6058900D05DD3D006BFB54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B793C7A1AF3ADBB005E7C2A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B793C921AF3AE0B005E7C2A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -43,22 +43,75 @@ static NSString *const kTitleKey = @"title";
 
     self.title = NSLocalizedString(@"Algorithm", @"");
 
+#ifdef SIMPLE_ROT_13_FREE
     algoList = [[NSArray alloc] initWithObjects:
-                 [NSDictionary dictionaryWithObjectsAndKeys:
-                  [NSArray arrayWithObjects:
-                   ALGO_ROT13, ALGO_ROT13_LEET,
-                   nil], kAlgoKey,
-                  @"Rotate", kTitleKey,
-                  nil],
-                 
-                 [NSDictionary dictionaryWithObjectsAndKeys:
-                  [NSArray arrayWithObjects:
-                   NSLocalizedString(@"Get Simple ROT13 Premium", @""),
-                   nil], kAlgoKey,
-                  NSLocalizedString(@"Need more ?", @""), kTitleKey,
-                  nil],
+                [NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSArray arrayWithObjects:
+                  ALGO_ROT13, ALGO_ROT13_LEET,
+                  nil], kAlgoKey,
+                 @"Rotate", kTitleKey,
+                 nil],
+                
+                [NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSArray arrayWithObjects:
+                  NSLocalizedString(@"Get Simple ROT13", @""),
+                  nil], kAlgoKey,
+                 NSLocalizedString(@"Tired of ads ?", @""), kTitleKey,
+                 nil],
+                
+                [NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSArray arrayWithObjects:
+                  NSLocalizedString(@"Get Simple ROT13 Premium", @""),
+                  nil], kAlgoKey,
+                 NSLocalizedString(@"Need more ?", @""), kTitleKey,
+                 nil],
+                
+                nil];
+#endif
 
-                 nil];
+#ifdef SIMPLE_ROT_13
+    algoList = [[NSArray alloc] initWithObjects:
+                [NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSArray arrayWithObjects:
+                  ALGO_ROT13, ALGO_ROT13_LEET,
+                  nil], kAlgoKey,
+                 @"Rotate", kTitleKey,
+                 nil],
+                
+                [NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSArray arrayWithObjects:
+                  NSLocalizedString(@"Get Simple ROT13 Premium", @""),
+                  nil], kAlgoKey,
+                 NSLocalizedString(@"Need more ?", @""), kTitleKey,
+                 nil],
+                
+                nil];
+#endif
+    
+#ifdef SIMPLE_ROT_13_PREMIUM
+    algoList = [[NSArray alloc] initWithObjects:
+                [NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSArray arrayWithObjects:
+                  ALGO_MD2, ALGO_MD4, ALGO_MD5,
+                  nil], kAlgoKey,
+                 @"Message Digest", kTitleKey,
+                 nil],
+                
+                [NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSArray arrayWithObjects:
+                  ALGO_ROT13, ALGO_ROT13_LEET, ALGO_ROT47,
+                  nil], kAlgoKey,
+                 @"Rotate", kTitleKey,
+                 nil],
+                
+                [NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSArray arrayWithObjects:
+                  ALGO_SHA1, ALGO_SHA224, ALGO_SHA256, ALGO_SHA384, ALGO_SHA512,
+                  nil], kAlgoKey,
+                 @"Secure Hash Algorithm", kTitleKey,
+                 nil],
+                nil];
+#endif
 
 }
 
@@ -110,8 +163,38 @@ static NSString *const kTitleKey = @"title";
         
     } else if ([name isEqualToString:ALGO_ROT13]) {
         cell.textLabel.text = name;
+        
+    } else if ([name isEqualToString:ALGO_ROT47]) {
+        cell.textLabel.text = name;
+        
+    } else if ([name isEqualToString:ALGO_MD2]) {
+        cell.textLabel.text = name;
+        
+    } else if ([name isEqualToString:ALGO_MD4]) {
+        cell.textLabel.text = name;
+        
+    } else if ([name isEqualToString:ALGO_MD5]) {
+        cell.textLabel.text = name;
+        
+    } else if ([name isEqualToString:ALGO_SHA1]) {
+        cell.textLabel.text = name;
+        
+    } else if ([name isEqualToString:ALGO_SHA224]) {
+        cell.textLabel.text = name;
+        
+    } else if ([name isEqualToString:ALGO_SHA256]) {
+        cell.textLabel.text = name;
+        
+    } else if ([name isEqualToString:ALGO_SHA384]) {
+        cell.textLabel.text = name;
+        
+    } else if ([name isEqualToString:ALGO_SHA512]) {
+        cell.textLabel.text = name;
 
     } else if ([name isEqualToString:NSLocalizedString(@"Get Simple ROT13 Premium", @"")]) {
+        cell.textLabel.text = name;
+        
+    } else if ([name isEqualToString:NSLocalizedString(@"Get Simple ROT13", @"")]) {
         cell.textLabel.text = name;
         
     }
@@ -135,7 +218,9 @@ static NSString *const kTitleKey = @"title";
 {
     NSString *name = [[[algoList objectAtIndex:indexPath.section] objectForKey:kAlgoKey] objectAtIndex:indexPath.row];
     
-    if ([name isEqualToString:NSLocalizedString(@"Get Simple ROT13 Premium", @"")]) {
+    if ([name isEqualToString:NSLocalizedString(@"Get Simple ROT13", @"")]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app//simple-rot13/id429616214"]];
+    } else if ([name isEqualToString:NSLocalizedString(@"Get Simple ROT13 Premium", @"")]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/simple-rot13-premium/id433594344"]];
     } else {
         self.parentView.chooseAlgoButton.title = name;
