@@ -32,20 +32,30 @@
 
     [self.navigationController.navigationBar setTranslucent:NO];
 
-#ifdef SIMPLE_ROT_13_FREE
-    self.adView.delegate=self;
-    [self.view addSubview:self.adView];
-    self.bannerTop.constant = -[self getBannerHeight];
-    [self.view layoutIfNeeded];
-    self.bannerIsVisible=NO;
-    [self.adView setHidden:!self.bannerIsVisible];
-#endif
     
 }
 
 
 - (void)viewWillAppear:(BOOL)flag {
     [super viewWillAppear:flag];
+
+#ifdef SIMPLE_ROT_13_FREE
+    self.adView.delegate=self;
+    [self.view addSubview:self.adView];
+    self.bannerTop.constant = -[self getBannerHeight];
+    // Si iPhone6+ starting in landscape, force real banner height (32 points)
+    if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ) {
+        UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+        if(orientation == UIInterfaceOrientationLandscapeLeft) {
+            self.bannerTop.constant = -32.0f;
+        } else if(orientation == UIInterfaceOrientationLandscapeRight) {
+            self.bannerTop.constant = -32.0f;
+        }
+    }
+    [self.view layoutIfNeeded];
+    self.bannerIsVisible=NO;
+    [self.adView setHidden:!self.bannerIsVisible];
+#endif
 }
 
 // Allow view to become the first responder
@@ -103,7 +113,6 @@
 #pragma mark - ADBannerViewDelegate
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner {
     if (!self.bannerIsVisible) {
-        NSLog(@"Banner shown");
         self.bannerIsVisible = YES;
         [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
         // banner is invisible now and moved out of the screen on 50 px
@@ -116,7 +125,6 @@
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
     if (self.bannerIsVisible) {
-        NSLog(@"Banner hidden");
         self.bannerIsVisible = NO;
         [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
         // banner is visible and we move it out of the screen, due to connection issue
