@@ -553,7 +553,7 @@
         if(![self.uiPopoverController isPopoverVisible]){
             // Popover is not visible
             self.uiPopoverController = [[UIPopoverController alloc] initWithContentViewController:selectorViewController];
-            [self.uiPopoverController setPopoverContentSize: CGSizeMake(320.0, selectorViewController.tableView.rowHeight * 6.5) animated:YES];
+            [self.uiPopoverController setPopoverContentSize: CGSizeMake(320.0, 46 * 8.0) animated:YES];
             [self.uiPopoverController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
         }else{
             [self.uiPopoverController dismissPopoverAnimated:YES];
